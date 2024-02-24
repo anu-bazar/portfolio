@@ -1,0 +1,25 @@
+.hero-background {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hero-background::before,
+  .hero-background::after {
+    content: '';
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    top: -10%;
+    left: -10%;
+    z-index: -1;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.5));
+    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+  }
+  
+  .hero-background::after {
+    left: auto;
+    right: -10%;
+    background: linear-gradient(145deg, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.1));
+    clip-path: polygon(0 0, 100% 0, 80% 100%, 20% 100%);
+  }
+  
